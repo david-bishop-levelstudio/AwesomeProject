@@ -55,7 +55,7 @@ const KeyboardAvoidingComponent = ({children}: Props) => {
     <KeyboardAvoidingView enabled={true} style={{flex: 1}} behavior="padding">
       <SafeAreaView style={styles.container}>
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-          <ScrollView style={{flex: 1}}>
+          <ScrollView style={{ flex: 1 }} contentContainerStyle={{ flex: 1 }} bounces={false}>
             <View style={styles.inner}>{children}</View>
             <Animated.View style={{height: bufferHeight}} />
           </ScrollView>
